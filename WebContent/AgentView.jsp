@@ -58,33 +58,18 @@
   
 <div class="mdl-textfield mdl-js-textfield">
   <textarea name="agente" class="mdl-textfield__input" type="text" rows="4" id="address" onClick='agente.value=""'>
-  <c:if test="${json.response==null}">
-  
-  <c:out value="What do you want to configure?"/>
-  
- </c:if>
+
   <c:out value="${json.response}"/>
   </textarea>
   <label class="mdl-textfield__label" for="address"></label>
 </div>
 <center>
 
-<c:if test="${json.menu==null}">
-<form action="Agent" method="get">
-<c:forEach var="menu" items="${elementos}" >
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="width:500px; height:25px" name="q" value="${menu}">
-${menu}</button>
-</c:forEach>
-</form>
-</c:if>
+
+
 <% lorena=0; %>
 <form action="Agent" method="get">
-
 <c:forEach var="menu" items="${json.menu}" >
-
-
-
-
 <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="width:500px; height:25px"name="q" value="<%= lorena %>">
 ${menu}</button>
 <% lorena= lorena+1; %>
