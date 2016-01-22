@@ -1,0 +1,47 @@
+<taskModel xmlns="http://ce.org/cea-2018" about="urn:cetask.wpi.edu:examples:Library">
+<task id="ConfigureThermostat">
+	<subtasks id="configuring">
+		<step name="connect" task="ConnectThermostat"/>
+		<step name="determine" task="DetermineShedules"/>
+		<step name="temperature" task="EstablishTemperature"/>
+		<step name="start" task="Start"/>
+	</subtasks>
+</task>
+<task id="ConnectThermostat">
+	<subtasks id="connecting">
+		<step name="light" task="ConnectToLight"/>
+	</subtasks>
+</task>
+<task id="DetermineShedules">
+	<subtasks id="determining">
+		<step name="wake" task="HourWake"/>
+		<step name="leavehome" task="HourToLeaveHome"/>
+		<step name="returnhome" task="HourToReturnHome"/>
+		<step name="sleep" task="HourToSleep"/>
+	</subtasks>
+</task>
+<task id="EstablishTemperature">
+	<subtasks id="establishing">
+		<step name="tempwake" task="TemperatureWake"/>
+		<step name="templeavehome" task="TemperatureLeaveHome"/>
+		<step name="tempreturnhome" task="TemperatureReturnHome"/>
+		<step name="tempsleep" task="TemperatureGoSleep"/>
+	</subtasks>
+</task>
+<task id="Start">
+	<subtasks id="starting">
+		<step name="run" task="PushButtonRun"/>
+	</subtasks>
+</task>
+<task id="ConnectToLight"/>
+<task id="HourWake"/>
+<task id="HourToLeaveHome"/>
+<task id="HourToReturnHome"/>
+<task id="HourToSleep"/>
+<task id="TemperatureWake"/>
+<task id="TemperatureLeaveHome"/>
+<task id="TemperatureReturnHome"/>
+<task id="TemperatureGoSleep"/>
+<task id="PushButtonRun"/>
+
+</taskModel>

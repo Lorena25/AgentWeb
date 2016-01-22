@@ -1,0 +1,52 @@
+<taskModel xmlns="http://ce.org/cea-2018" about="urn:cetask.wpi.edu:examples:Library">
+
+<task id="SwitchRouter">
+	<subtasks id="connect">
+		<step name="connectRout" task="ConnectRouter"/>
+		</subtasks>
+	<subtasks id="turnOn">
+		<step name="turnon" task="TurnOnRouter"/>
+		</subtasks>
+	<subtasks id="test">
+		<step name="test" task="TestRouter"/>
+	</subtasks>
+	
+	</task>
+	
+<task id="ConnectRouter">
+    <subtasks id="light">
+	<step name="connectLight" task="ConnectToLight"/>
+	</subtasks>
+	<subtasks id="adsl">
+	<step name="connectToADSL" task="ConnectToADSL"/>
+	</subtasks>
+</task>
+<task id="TurnOnRouter">
+    <subtasks id="buttonon">
+	<step name="button" task="PushButtonOn"/>
+	</subtasks>
+	<subtasks id="buttonreset">
+	<step name="reset" task="PushButtonReset"/>
+	</subtasks>
+</task>
+<task id="TestRouter">
+    <subtasks id="lighton">
+	<step name="lighton" task="TestLightOn"/>
+	</subtasks>
+	<subtasks id="lightinternet">
+	<step name="lightinternet" task="TestLightInternet"/>
+	</subtasks>
+	<subtasks id="lightwifi">
+	<step name="lightwifi" task="TestLightWifi"/>
+	</subtasks>
+</task>
+<task id="ConnectToLight"/>
+<task id="ConnectToADSL"/>
+<task id="PushButtonOn"/>
+<task id="PushButtonReset"/>
+<task id="TestLightOn"/>
+<task id="TestLightInternet"/>
+<task id="TestLightWifi"/>
+
+
+</taskModel>

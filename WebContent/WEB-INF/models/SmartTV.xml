@@ -1,0 +1,74 @@
+<taskModel xmlns="http://ce.org/cea-2018" about="urn:cetask.wpi.edu:examples:Library">
+<task id="ConfigureSmartTVSamsung">
+	<subtasks id="configuring">
+		<step name="internet" task="InternetConecction"/>
+		<step name="account" task="CreateSamsungAccount"/>
+		<step name="social" task="SocialNetWorks"/>
+		<step name="apps" task="Applications"/>
+		<step name="ontv" task="InterfazOnTv"/>
+		<step name="movies" task="MoviesAndTV"/>
+		<step name="files" task="FilesSharedByWifi"/>
+	</subtasks>
+</task>
+<task id="InternetConecction">
+	<subtasks id="connecting">
+		<step name="lan" task="ChooseConnectionLAN"/>
+		<step name="wifi" task="ChooseConnectionWifi"/>
+	</subtasks>
+</task>
+<task id="CreateSamsungAccount">
+	<subtasks id="creating">
+		<step name="email" task="SetAnEmail"/>
+		<step name="password" task="SetAPassword"/>
+	</subtasks>
+</task>
+<task id="SocialNetWorks">
+	<subtasks id="networks">
+		<step name="install" task="InstallSocialApplications"/>
+		<step name="link" task="LinkWithSamsungAccount"/>
+		<step name="automatic" task="AutomaticAccess"/>
+		<step name="skype" task="VideoCallSkype"/>
+	</subtasks>
+</task>
+<task id="Applications">
+	<subtasks id="downloading">
+		<step name="download" task="DownloadsAppsForSamsungShop"/>
+	</subtasks>
+</task>
+<task id="InterfazOnTv">
+	<subtasks id="tv">
+		<step name="recomendation" task="SeeRecomendationPrograms"/>
+	</subtasks>
+</task>
+<task id="MoviesAndTV">
+	<subtasks id="catalog">
+		<step name="movies" task="MoviesCatalogSmartTV"/>
+		<step name="series" task="SeriesCatalogSmartTV"/>
+	</subtasks>
+</task>
+<task id="FilesSharedByWifi">
+	<subtasks id="sharing">
+		<step name="smartv" task="FilesFromSmartTv"/>
+		<step name="hardisk" task="FilesFromHardDisk"/>
+		<step name="device" task="FilesFromSamsungDevices"/>
+
+	</subtasks>
+</task>
+
+<task id="ChooseConnectionWifi"/>
+<task id="ChooseConnectionLAN"/>
+<task id="SetAnEmail"/>
+<task id="SetAPassword"/>
+<task id="InstallSocialApplications"/>
+<task id="LinkWithSamsungAccount"/>
+<task id="AutomaticAccess"/>
+<task id="VideoCallSkype"/>
+<task id="DownloadsAppsForSamsungShop"/>
+<task id="SeeRecomendationPrograms"/>
+<task id="MoviesCatalogSmartTV"/>
+<task id="SeriesCatalogSmartTV"/>
+<task id="FilesFromSmartTv"/>
+<task id="FilesFromHardDisk"/>
+<task id="FilesFromSamsungDevices"/>
+
+</taskModel>

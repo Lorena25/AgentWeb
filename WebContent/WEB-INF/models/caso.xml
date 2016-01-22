@@ -1,0 +1,111 @@
+<taskModel xmlns="http://ce.org/cea-2018" about="urn:cetask.wpi.edu:examples:Library">
+<!--
+ This is exercise done in CS 525U class, adapted from
+       Chapter 10 of Interactive Design by Preece, Rogers & Sharp.
+       See Library.pdf for graphical presentations of this model. 
+-->
+<task id="CheckEmail">
+<subtasks id="checking">
+<step name="read" task="ReadEmail"/>
+<step name="deal" task="DealWithEmail"/>
+
+</subtasks>
+</task>
+<task id="ReadEmail">
+<subtasks id="reading">
+<step name="select" task="SelectEmail"/>
+<step name="open" task="OpenEmail"/>
+</subtasks>
+</task>
+<task id="SelectEmail">
+</task>
+<task id="OpenEmail">
+</task>
+<task id="DealWithEmail">
+
+<subtasks id="acting">
+<step name="act" task="ActOnEmail"/>
+<step name="finish" task="FinishWithEmail"/>
+</subtasks>
+<subtasks id="finishing">
+<step name="finish" task="FinishWithEmail"/>
+</subtasks>
+</task>
+<task id="ActOnEmail">
+
+<subtasks id="replying">
+<step name="reply" task="CreateReply"/>
+<step name="send" task="SendEmail"/>
+</subtasks>
+<subtasks id="forwarding">
+<step name="forward" task="CreateForward"/>
+<step name="send" task="SendEmail"/>
+</subtasks>
+</task>
+<task id="FinishWithEmail">
+<subtasks id="closing">
+<step name="close" task="CloseEmail"/>
+
+</subtasks>
+<subtasks id="deleting">
+<step name="delete" task="DeleteEmail"/>
+
+</subtasks>
+</task>
+<task id="CreateReply">
+
+</task>
+<task id="CreateForward">
+
+</task>
+<task id="DeleteEmail">
+
+</task>
+<task id="CloseEmail">
+
+</task>
+<task id="WriteEmail">
+<!--  <input name="email" type="Email"/>  -->
+<subtasks id="writing">
+<step name="create" task="CreateEmail"/>
+<step name="send" task="SendEmail"/>
+</subtasks>
+</task>
+<task id="CreateEmail">
+
+</task>
+<task id="SendEmail">
+<!--
+<input name="recipient" type="string"/>
+  	<input name="subject" type="string"/>
+  	<input name="message" type="string"/>
+-->
+<!--
+ subtasks id="fillInFields"  ordered="false">
+  	
+      <step name="recipient" task="FillInRecipient"/>
+      <step name="subject" task="FillInSubject"/>
+      <step name="message" task="FillInMessage"/>
+      <binding slot="$recipient.recipient" value="$this.recipient"/>
+      <binding slot="$subject.subject" value="$this.user"/>
+      <binding slot="$message.message" value="$this.message"/>
+      
+    </subtasks
+-->
+
+</task>
+<!--
+task id="FillInRecipient">
+  	<input name="recipient" type="string"/>
+  </task>
+  
+  <task id="FillInSubject">
+  	<input name="subject" type="string"/>
+  </task>
+  
+  <task id="FillInMessage">
+  	<input name="message" type="string"/>
+  </task>
+-->
+
+</taskModel>

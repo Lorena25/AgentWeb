@@ -1,0 +1,115 @@
+<taskModel xmlns="http://ce.org/cea-2018" about="urn:cetask.wpi.edu:examples:Library">
+    
+<task id="WebAgent">
+	<subtasks id="router">
+		<step name="router" task="SwitchRouter"/>
+		</subtasks>
+	<subtasks id="thermostat">
+		<step name="thermostat" task="ConfigureThermostat"/>
+		</subtasks>
+	<subtasks id="smartTV">
+		<step name="smarttv" task="ConfigureSmartTVSamsung"/>
+	</subtasks>
+</task>
+<task id="SwitchRouter">
+	<subtasks id="connect">
+		<step name="connectRout" task="ConnectRouter"/>
+		</subtasks>
+	<subtasks id="turnOn">
+		<step name="turnon" task="TurnOnRouter"/>
+		</subtasks>
+	<subtasks id="test">
+		<step name="test" task="TestRouter"/>
+	</subtasks>
+	
+	</task>
+	
+<task id="ConnectRouter">
+    <subtasks id="light">
+	<step name="connectLight" task="ConnectToLight"/>
+	</subtasks>
+	<subtasks id="adsl">
+	<step name="connectToADSL" task="ConnectToADSL"/>
+	</subtasks>
+</task>
+<task id="TurnOnRouter">
+    <subtasks id="buttonon">
+	<step name="button" task="PushButtonOn"/>
+	</subtasks>
+	<subtasks id="buttonreset">
+	<step name="reset" task="PushButtonReset"/>
+	</subtasks>
+</task>
+<task id="TestRouter">
+    <subtasks id="lighton">
+	<step name="lighton" task="TestLightOn"/>
+	</subtasks>
+	<subtasks id="lightinternet">
+	<step name="lightinternet" task="TestLightInternet"/>
+	</subtasks>
+	<subtasks id="lightwifi">
+	<step name="lightwifi" task="TestLightWifi"/>
+	</subtasks>
+</task>
+<task id="ConnectToLight"/>
+<task id="ConnectToADSL"/>
+<task id="PushButtonOn"/>
+<task id="PushButtonReset"/>
+<task id="TestLightOn"/>
+<task id="TestLightInternet"/>
+<task id="TestLightWifi"/>
+	
+<task id="ConfigureThermostat">
+	<subtasks id="connectthermostat">
+		<step name="connect" task="ConnectThermostat"/>
+		</subtasks>
+		<subtasks id ="determineshedules">
+		<step name="determine" task="DetermineShedules"/>
+		</subtasks>
+		<subtasks id ="establishTemp">
+		<step name="temperature" task="EstablishTemperature"/>
+		</subtasks>
+		<subtasks id ="startingthermostat">
+		<step name="start" task="Start"/>
+	</subtasks>
+</task>
+<task id="ConnectThermostat"/>
+<task id="DetermineShedules"/>
+<task id="EstablishTemperature"/>
+<task id="Start"/>
+
+
+
+    <task id="ConfigureSmartTVSamsung">
+	<subtasks id="internet">
+		<step name="internet" task="InternetConnection"/>
+		</subtasks>
+	<subtasks id="createaccount">
+		<step name="account" task="CreateSamsungAccount"/>
+		</subtasks>
+	<subtasks id ="socialnetworks">
+		<step name="social" task="SocialNetworks"/>
+		</subtasks>
+	<subtasks id ="applications">
+		<step name="apps" task="Applications"/>
+		</subtasks>
+	<subtasks id="interfazontv">
+		<step name="ontv" task="InterfazOnTv"/>
+	</subtasks>
+	<subtasks id ="movies">
+		<step name="movies" task="MoviesAndTV"/>
+		</subtasks>
+	<subtasks id ="filesshared">
+		<step name="files" task="FilesSharedByWifi"/>
+	
+	</subtasks>
+</task>
+<task id="InternetConnection"/>
+<task id="CreateSamsungAccount"/>
+<task id="SocialNetworks"/>
+<task id="Applications"/>
+<task id="InterfazOnTv"/>
+<task id="MoviesAndTV"/>
+<task id="FilesSharedByWifi"/>
+
+</taskModel>
