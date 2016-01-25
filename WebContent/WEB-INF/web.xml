@@ -26,11 +26,16 @@
       <param-name>path</param-name>
       <param-value>/WEB-INF/models/prueba.xml</param-value>
     </init-param>
+   
   </servlet>
   <servlet-mapping>
     <servlet-name>WebAgentServlet</servlet-name>
     <url-pattern>/Agent</url-pattern>
   </servlet-mapping>
+  <error-page> 
+<exception-type>java.lang.Exception</exception-type> 
+<location>/AgentView.jsp</location> 
+</error-page> 
   <welcome-file-list>
     <welcome-file>AgentView.jsp</welcome-file>
   </welcome-file-list>
