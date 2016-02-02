@@ -33,6 +33,7 @@ public Interaction interaction() {
 public ArrayList<String> menu (Interaction interaction){
 	  menu.clear();
 	List<Plugin.Item> items =interaction.getExternal().generate(interaction);
+	System.out.println(items);
    // print out formatted choices on system console
 	int i=0; 
 	 for (Plugin.Item item : items) {

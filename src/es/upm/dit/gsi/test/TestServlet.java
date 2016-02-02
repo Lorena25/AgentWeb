@@ -34,7 +34,7 @@ public class TestServlet {
 	   sr.registerServlet( "myServlet", WebAgentServlet.class.getName() );
 	   ServletUnitClient sc= sr.newClient(); 
 	   WebRequest request = new PostMethodWebRequest("http://test.meterware.com/myServlet");
-	   request.setParameter("lorena", "lorena");
+	   request.setParameter("agent", "agent");
 	   InvocationContext ic = sc.newInvocation(request);
 	   WebResponse response= sc.getResponse(ic);
 	   
@@ -63,6 +63,7 @@ public class TestServlet {
 	
 		//pruebas agente
 		assertTrue(interaction.getSystem().respond(interaction, false, guess, retry));
+		
 		assertEquals("How shall we using web agent?", agent.getAtributo());
 		
 	
@@ -76,7 +77,6 @@ public class TestServlet {
 	
 		assertTrue(interaction.getSystem().respond(interaction, false, guess, retry));
 		assertEquals("How shall we set up the basic operation of a router?", agent.getAtributo());
-		System.out.println(agente1.menu(interaction));
 		assertEquals("Let's set up the basic operation of a router connection router.",agente1.menu(interaction).get(0));
 		assertEquals("Let's set up the basic operation of a router turning on router.",agente1.menu(interaction).get(1));
 		assertEquals("Let's set up the basic operation of a router testing router.",agente1.menu(interaction).get(2));
